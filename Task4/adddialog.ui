@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddDialog</class>
+ <widget class="QDialog" name="AddDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Добавить участника состязания</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="minimumSize">
+       <size>
+        <width>580</width>
+        <height>460</height>
+       </size>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::ExpandingFieldsGrow</enum>
+       </property>
+
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCompetitionName">
+         <property name="text"><string>Название состязания:</string></property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="competitionNameEdit"/>
+       </item>
+
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelDate">
+         <property name="text"><string>Дата состязания (YYYY-MM-DD):</string></property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="dateEdit">
+         <property name="inputMask"><string>0000-00-00</string></property>
+        </widget>
+       </item>
+
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelHorseName">
+         <property name="text"><string>Кличка лошади:</string></property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="horseNameEdit"/>
+       </item>
+
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelHorseSex">
+         <property name="text"><string>Пол лошади:</string></property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="horseSexCombo">
+         <item><property name="text"><string>Жеребец (male)</string></property></item>
+         <item><property name="text"><string>Кобыла (female)</string></property></item>
+        </widget>
+       </item>
+
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelHorseAge">
+         <property name="text"><string>Возраст лошади:</string></property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="horseAgeEdit">
+         <property name="minimum"><number>1</number></property>
+         <property name="maximum"><number>30</number></property>
+        </widget>
+       </item>
+
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelOwnerFio">
+         <property name="text"><string>ФИО владельца:</string></property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="ownerFioEdit"/>
+       </item>
+
+       <item row="6" column="0">
+        <widget class="QLabel" name="labelOwnerAddress">
+         <property name="text"><string>Адрес владельца:</string></property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="ownerAddressEdit"/>
+       </item>
+
+       <item row="7" column="0">
+        <widget class="QLabel" name="labelOwnerPhone">
+         <property name="text"><string>Телефон владельца:</string></property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="ownerPhoneEdit">
+         <property name="inputMask"><string>+0(000)000-00-00</string></property>
+        </widget>
+       </item>
+
+       <item row="8" column="0">
+        <widget class="QLabel" name="labelJockeyFio">
+         <property name="text"><string>ФИО жокея:</string></property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="jockeyFioEdit"/>
+       </item>
+
+       <item row="9" column="0">
+        <widget class="QLabel" name="labelJockeyAddress">
+         <property name="text"><string>Адрес жокея:</string></property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLineEdit" name="jockeyAddressEdit"/>
+       </item>
+
+       <item row="10" column="0">
+        <widget class="QLabel" name="labelJockeyAge">
+         <property name="text"><string>Возраст жокея:</string></property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QSpinBox" name="jockeyAgeEdit">
+         <property name="minimum"><number>18</number></property>
+         <property name="maximum"><number>60</number></property>
+        </widget>
+       </item>
+
+       <item row="11" column="0">
+        <widget class="QLabel" name="labelJockeyRating">
+         <property name="text"><string>Рейтинг жокея:</string></property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QDoubleSpinBox" name="jockeyRatingEdit">
+         <property name="decimals"><number>1</number></property>
+         <property name="minimum"><double>0.0</double></property>
+         <property name="maximum"><double>10.0</double></property>
+         <property name="singleStep"><double>0.1</double></property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation"><enum>Qt::Horizontal</enum></property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AddDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AddDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>
