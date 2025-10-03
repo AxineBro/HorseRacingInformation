@@ -20,7 +20,7 @@ RaceParticipant AddDialog::getParticipant() {
     p.competitionName = ui->competitionNameEdit->text().trimmed();
     p.competitionDate = ui->dateEdit->text().trimmed();
     p.horse.name = ui->horseNameEdit->text().trimmed();
-    p.horse.sex = ui->horseSexCombo->currentText().contains("male") ? "male" : "female";
+    p.horse.sex = ui->horseSexCombo->currentText().contains("female") ? "female" : "male";
     p.horse.age = ui->horseAgeEdit->value();
     p.owner.fio = ui->ownerFioEdit->text().trimmed();
     p.owner.address = ui->ownerAddressEdit->text().trimmed();
